@@ -1,0 +1,151 @@
+.landing {
+  font-family: "Segoe UI", sans-serif;
+
+  .btn {
+    margin: 34.3vh 1vw;
+    margin-left: 6.1vw;
+    padding: 15px 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+    &.primary {
+      background: #ff7a18;
+      color: #fff;
+    }
+
+    &.light {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+    }
+
+    &.small {
+      padding: 18px 58px;
+    }
+  }
+     .btn:active {
+      background: skyblue;
+      color: #fff;
+      transform: scale(0.99);
+    }
+
+  .hero {
+    /* padding: 90px 20px; */
+    text-align: center;
+    /* background: linear-gradient(180deg, #3b82f6, #60a5fa); */
+    color: rgba(12, 10, 10, 0.705);
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      opacity: 0.9;
+      margin-bottom: 24px;
+      color: white;
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    &__mock {
+      display: flex;
+      justify-content: center;
+
+      .mock {
+        background: #fff;
+        color: #1e293b;
+        padding: 20px;
+        border-radius: 16px;
+        width: 300px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+        .item {
+          background: #f1f5f9;
+          padding: 10px;
+          border-radius: 8px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .products {
+    padding: 70px 40px;
+    text-align: center;
+    margin-top: 2vh;
+
+    .sub {
+      color: #64748b;
+      margin-bottom: 40px;
+      margin-top: 3vh;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+
+      .card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        text-align: left;
+        text-align: center;
+        box-shadow: 1px 1px 8px grey;
+        /* margin-top: 2vh; */
+
+        img {
+          width: 100%;
+          height: 180px;
+          object-fit: contain;
+          border-radius: 12px;
+          background: #f1f5f9;
+          padding: 12px;
+          margin-bottom: 14px;
+          cursor: pointer;
+          box-shadow: 1px 1px 8px grey;
+
+          &.hot::after {
+            content: "Hot";
+            position: absolute;
+            background: #ff7a18;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 6px;
+          }
+        }
+
+        img:hover {
+          transform: scale(1.03);
+        }
+        span {
+          color: #ff7a18;
+          font-weight: 600;
+        }
+      }
+      .card:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+}
+
+/* background image */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 114vh;
+  object-fit: cover;
+  z-index: -2;
+    clip-path: ellipse(100% 100% at 50% 0%);
+}
